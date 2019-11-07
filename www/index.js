@@ -27,11 +27,11 @@ const juliaSetPreSets = [
     { name: '-0.618 + 0i', real: -0.618, imaginary: 0 },
 ];
 
-let zoom = 0;
+let zoom = 1;
 let oldX = 0;
 let oldY = 0;
-let xOffset = 0;
-let yOffset = 0;
+let xOffset = 1;
+let yOffset = 1;
 let isDragging = false;
 let mandlebrot = false; // Currently rendering mandlebrot
 
@@ -62,6 +62,7 @@ function resizeAndDraw() {
     canvas.width = w;
     canvas.height = h;
     const size = w > h ? w : h;
+    console.log(zoom)
     if (mandlebrot === true) {
         wasm.generate_mandelbrot_image(ctx, size, size, iterations, zoom, xOffset, yOffset);
     } else {
@@ -90,7 +91,7 @@ presets.addEventListener("change", () => {
 });
 
 canvas.addEventListener('wheel', function (event) {
-    zoom += event.deltaY;
+    zoom += event.deltaY > 0 ? 0.03 : -0.03;
     resizeAndDraw();
     event.preventDefault();
     return false;

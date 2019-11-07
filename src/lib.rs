@@ -120,13 +120,12 @@ where
     F: Fn(f64, f64) -> u32,
 {
     let mut data = Vec::new();
+    let param_r = 200.0 + offset_x;
+    let param_i = -200.0 + offset_y;
+    let scale = 1.0 / zoom;
 
     for x in 0..width {
         for y in 0..height {
-            let param_r = 100.0 + offset_x + (zoom * 0.5);
-            let param_i = -200.0 + offset_y + (zoom * 0.25);
-            let scale = 1.0 + (zoom * 0.001);
-
             let stability =
                 stability_function(x as f64 * scale - param_i, y as f64 * scale - param_r);
 
