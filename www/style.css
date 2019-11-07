@@ -2,7 +2,7 @@ body {
   background-color: black;
 }
   
-  .controls {
+.controls {
     position: fixed;
     left: 0;
     bottom: 0px;
@@ -10,20 +10,9 @@ body {
     width: 100vw;
     padding: 15px;
     background-color: #ddd;
-  }
-  
-  .controls h1 {}
-  
-  .controls > div {
-    margin-right: 1em;
-  }
-  
-  button,
-  input[type="number"] {
-    margin-bottom: 0;
-  }
+}
 
-  #render {
+#render {
     background-color: #0095ff;
     border: none;
     color: white;
@@ -37,10 +26,10 @@ body {
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
-  }
+}
 
-  canvas {
+canvas {
     position: fixed;
     left: 0;
     top: 0px;
-  }
+}
