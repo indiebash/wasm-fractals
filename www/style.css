@@ -1,0 +1,46 @@
+body {
+  background-color: black;
+}
+  
+  .controls {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    height: 100px;
+    width: 100vw;
+    padding: 15px;
+    background-color: #ddd;
+  }
+  
+  .controls h1 {}
+  
+  .controls > div {
+    margin-right: 1em;
+  }
+  
+  button,
+  input[type="number"] {
+    margin-bottom: 0;
+  }
+
+  #render {
+    background-color: #0095ff;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    height: 80px;
+    width: 80px;
+    position: fixed;
+    right: 15px;
+    bottom: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  canvas {
+    position: fixed;
+    left: 0;
+    top: 0px;
+  }
